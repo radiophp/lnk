@@ -13,6 +13,7 @@ class CircleController extends AbstractController
     #[Route('/circle/{radius<\d+>}', name: 'app_circle')]
     public function index(Circle $Circle,Request $request): JsonResponse
     {
+        //888888888888888
         $Circle->setRadius( $request->attributes->getDigits('radius') );
         $return_array = [
             'type'          =>  'circle',
